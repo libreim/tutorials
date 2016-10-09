@@ -24,7 +24,7 @@
 1. Añade los cambios a un **nuevo commit***  
     ~~~sh
     git add test.txt README.md
-    git commit "Pequeñas modificaciones
+    git commit -m "Pequeñas modificaciones
 
     Añade un nuevo archivo y una aclaración en el Readme."
     ~~~
