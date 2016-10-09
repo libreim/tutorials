@@ -1,0 +1,139 @@
+% Hola! Bienvenido a este documento LaTeX de ejemplo. Para
+% compilarlo, ejecuta `pdflatex ejemplo.latex` en tu terminal.
+% Hay otros compiladores de LaTeX (xelatex, lualatex), la única
+% diferencia apreciable es el soporte de algunos paquetes y de
+% fuentes.
+
+% Esto es el preámbulo. En esta parte del documento puedes cargar
+% paquetes y definir nuevos comandos, entre otras cosas.
+
+% El primer comando del preámbulo suele ser la especificación del
+% tipo de documento que vas a escribir. En este caso es un artículo
+% en formato A4, pero podría ser un libro, una presentación, etc.
+\documentclass[a4paper]{article}
+
+% Para escribir en español necesitarás acentos y eñes, así que
+% será necesario indicar la codificación del documento:
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Además, algunos comandos de LaTeX escriben texto en el documento,
+% procuraremos que esté en español:
+\usepackage[spanish,es-noquoting,es-lcroman]{babel}
+\selectlanguage{spanish}
+
+% Vamos a incluir algunos paquetes. Los paquetes básicos para
+% escritura de documentos matemáticos son:
+\usepackage{amsmath,amsfonts,amsthm}
+
+% Un paquete más, para poder añadir enlaces
+\usepackage{hyperref}
+
+% Con eso será suficiente por ahora. Recuerda que si quieres que
+% tu documento cuente con alguna funcionalidad fuera de lo
+% habitual, suele haber un paquete de LaTeX que la define. Por
+% ejemplo, tablas muy grandes, diagramas, tipografías, etc.
+
+% Lo último que haremos en este preámbulo será declarar el título
+% y el autor de nuestro documento
+\title{Ejemplo de documento en LaTeX}
+\author{David Charte}
+
+% Genial. Ya estamos listos para comenzar a escribir. El contenido
+% hay que englobarlo en el entorno `document` con \begin y \end:
+\begin{document}
+
+% Uou, ahora lo que escribas aquí aparecerá en tu documento al
+% compilarlo, pero antes de que se nos olvide vamos a colocar
+% el título que hemos definido antes:
+\maketitle
+
+% Vamos a crear una sección (título de primer nivel) para no ir
+% poniendo texto suelto a lo loco
+\section{Introducción}
+
+Este documento PDF ha sido generado al compilar la \textit{demo}
+\texttt{ejemplo.latex} que viene incluida en el repositorio de
+preparación para primer curso. En las siguientes secciones se exploran
+algunas de las opciones básicas de \LaTeX\ para formateo de texto e
+inclusión de otros elementos, como ecuaciones, tablas y figuras.
+
+\section{Formato}
+
+Dar formato al texto en \LaTeX\ es relativamente sencillo. Basta con
+usar algunos comandos usuales para \textbf{resaltar texto en negrita},
+tal vez \textit{añadir algunas palabras en cursiva}, incluso
+\texttt{código en monoespaciada}. Para añadir un bloque de código
+podemos usar el entorno \texttt{verbatim}.
+
+\begin{verbatim}
+def count_words string
+  string.split(" ").length
+end
+\end{verbatim}
+
+\section{Matemáticas}
+
+% Ey, para hacer títulos de segundo nivel podemos crear "subsecciones"
+% (y claro, también hay subsubsecciones para los de tercer nivel).
+\subsection{El entorno matemático}
+El código que escribes en \LaTeX\ regularmente sólo acepta texto
+normal, no podemos escribir ecuaciones directamente sobre él. Sin
+embargo, hay comandos y entornos que activan el \textbf{entorno
+  matemático}. Dentro de él, podrás dibujar símbolos matemáticos
+mediante comandos especiales.
+
+\subsection{Ecuaciones en línea}
+El entorno matemático en línea (es decir, integrado en el párrafo de
+texto) se activa y termina con el signo del dólar \texttt{\$}. Veamos
+un ejemplo: $e^{i\tau}=1$.
+
+\subsection{Ecuaciones en bloque}
+A las ecuaciones que ocupan su propio renglón y van separadas del
+texto se les suele llamar \textit{en bloque}. Se pueden englobar en el
+entorno \texttt{equation} o bien entre \textbackslash[ y
+\textbackslash]. La diferencia entre estas dos opciones es que la
+primera numerará la ecuación
+\begin{equation}
+  f:\mathbb{R}^2 \rightarrow \mathbb{R}^2
+\end{equation}
+y la segunda no (un resultado similar se consigue con el entorno
+\texttt{equation*}):
+\[ f((x, y)) = (-y, x) \]
+
+\subsection{Símbolos}
+
+En el modo matemático podemos escribir variedad de símbolos, por
+ejemplo las letras griegas $\alpha, \beta, \gamma$ y las demás. Para
+una referencia más completa, visita
+\href{https://en.wikibooks.org/wiki/LaTeX/Mathematics#List_of_Mathematical_Symbols}{
+  este libro de Wikibooks}.
+
+\subsection{Más ecuaciones}
+\[
+  \delta_{ij} =
+  \begin{cases}
+    1 & \mbox{ si } i = j \\
+    0 & \mbox{ en otro caso}
+  \end{cases}
+\]
+
+\[
+  Ax = 
+  \begin{pmatrix}
+    \cos\alpha & -\sen\alpha & 0  \\
+    \sen\alpha & \cos\alpha  & 0  \\
+    0          & 0           & -1
+  \end{pmatrix}
+  \begin{pmatrix}
+    x_1 \\
+    x_2 \\
+    x_3
+  \end{pmatrix}
+\]
+
+           
+
+\section{Figuras, tablas y otros}
+
+\end{document}
