@@ -9,6 +9,7 @@ Pequeños tutoriales introductorios a herramientas de Informática y Matemática
 ## Herramientas para el estudio
 
 * [Ejemplo básico de documento LaTeX](https://github.com/libreim/tutorials/blob/master/ejemplo.tex)
+* [Ejemplo básico de documento Markdown](https://github.com/libreim/tutorials/blob/master/markdown.md)
 
 ## Contribuir
 
