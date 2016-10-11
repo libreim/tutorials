@@ -14,7 +14,7 @@ geometry: margin=1in        # Tamaño de los márgenes
 
 ## Sintaxis
 
-A continuación puedes ver ejemplos de la sintaxis básica. Para entender cómo funciona Markdown mira [el código fuente](//github.com/libreim/tutorials/blob/master/markdown.md) de este documento a la vez que lo lees. Puedes ver algunos ejemplos más [aquí](//guides.github.com/features/mastering-markdown).
+A continuación puedes ver ejemplos de la sintaxis básica. Para entender cómo funciona Markdown mira [el código fuente](//github.com/libreim/tutorials/blob/master/markdown.md) de este documento a la vez que lo lees. Puedes ver algunos ejemplos más [aquí](//https://raw.githubusercontent.com/libreim/tutorials/master/markdown.md).
 
 ### Títulos
 
@@ -71,7 +71,7 @@ Para incluir imágenes lo hacemos con la sintaxis `![Texto alternativo](url)`:
 Esto es un comentario! Quita la imagen cuando generes el documento en pandoc o descárgala y pon la ruta local.
 -->
 
-![Meme de Doge de Wikimedia Commons](//upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg)
+![Meme de Doge de Wikimedia Commons](http://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg)
 
 *****
 
