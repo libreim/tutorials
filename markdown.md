@@ -10,11 +10,13 @@ geometry: margin=1in        # Tamaño de los márgenes
 
 # Markdown 101
 
-[Markdown](//daringfireball.net/projects/markdown) es un lenguaje de marcado ligero utilizado en páginas como Github (este documento está escrito en Markdown!). También puede compilarse a LaTeX utilizando herramientas como [`pandoc`](http://pandoc.org) para generar pdfs.
+[Markdown](//daringfireball.net/projects/markdown) es un lenguaje de marcado ligero utilizado en páginas como Github (este documento está escrito en Markdown!).
+También puede compilarse a LaTeX utilizando herramientas como [`pandoc`](http://pandoc.org) para generar pdfs.
 
 ## Sintaxis
 
-A continuación puedes ver ejemplos de la sintaxis básica. Para entender cómo funciona Markdown mira [el código fuente](//github.com/libreim/tutorials/blob/master/markdown.md) de este documento a la vez que lo lees. Puedes ver algunos ejemplos más [aquí](//https://raw.githubusercontent.com/libreim/tutorials/master/markdown.md).
+A continuación puedes ver ejemplos de la sintaxis básica. 
+Para entender cómo funciona Markdown mira [el código fuente](//raw.githubusercontent.com/libreim/tutorials/master/markdown.md) de este documento a la vez que lo lees.
 
 ### Títulos
 
@@ -33,7 +35,8 @@ También puedes poner citas:
 
 > GNU, which stands for Gnu's Not Unix, is the name for the complete Unix-compatible software system which I am writing so that I can give it away free to everyone who can use it.
 
-En Github podemos además tener texto ~~tachado~~ o usar [emojis](http://www.webpagefx.com/tools/emoji-cheat-sheet) :octocat:. Además podemos poner código con coloreado de sintaxis indicando el nombre del lenguaje:
+En Github podemos además tener texto ~~tachado~~ o usar [emojis](http://www.webpagefx.com/tools/emoji-cheat-sheet) :octocat:.
+Además podemos poner código con coloreado de sintaxis indicando el nombre del lenguaje:
 
 ```haskell
 main :: IO ()
@@ -68,7 +71,8 @@ En Github además tenemos listas de tareas:
 Para incluir imágenes lo hacemos con la sintaxis `![Texto alternativo](url)`:
 
 <!--
-Esto es un comentario! Quita la imagen cuando generes el documento en pandoc o descárgala y pon la ruta local.
+Esto es un comentario! Quita la imagen cuando generes el documento
+en pandoc o descárgala y pon la ruta local.
 -->
 
 ![Meme de Doge de Wikimedia Commons](http://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg)
@@ -77,7 +81,9 @@ Esto es un comentario! Quita la imagen cuando generes el documento en pandoc o d
 
 ### Enlaces
 
-Los enlaces se indican con una sintaxis similar `[texto](url)`. Quedan [así](//www.youtube.com/watch?v=dQw4w9WgXcQ). También puedes poner enlaces directamente entre ángulos:
+Los enlaces se indican con una sintaxis similar `[texto](url)`. 
+Quedan [así](//www.youtube.com/watch?v=dQw4w9WgXcQ). 
+También puedes poner enlaces directamente entre ángulos:
 
 <http://www.omfgdogs.com>
 
@@ -85,16 +91,19 @@ Los enlaces se indican con una sintaxis similar `[texto](url)`. Quedan [así](//
 
 ## Cómo usarlo
 
-Puedes usar Markdown en Github en un archivo con la extensión `.md` o en los comentarios, las [issues](//guides.github.com/features/issues) y Github lo interpretará automáticamente. También puedes usarlo en [DGIIM Overflow](http://tux.ugr.es/dgiim/overflow).
+Puedes usar Markdown en Github en un archivo con la extensión `.md` o en los comentarios, las [issues](//guides.github.com/features/issues) y Github lo interpretará automáticamente. 
+También puedes usarlo en [DGIIM Overflow](http://tux.ugr.es/dgiim/overflow).
 
 ### Pandoc
 
 > :warning: Atención: Algunas de las características que funcionan en Github no funcionaran cuando generes el pdf
 
-Para generar pdfs puedes utilizar [`pandoc`](http://pandoc.org). Por ejemplo, si quieres generar un pdf a partir de este fichero basta utilizar el comando:
+Para generar pdfs puedes utilizar [`pandoc`](http://pandoc.org). 
+Por ejemplo, si quieres generar un pdf a partir de este fichero basta utilizar el comando:
 
 ```bash
 pandoc markdown.md -o markdown.pdf
 ```
 
- Puede incluirse [información adicional](http://pandoc.org/MANUAL.html#variables-set-by-pandoc) en la cabecera (escrita en [YAML](http://yaml.org)) para controlar distintos aspectos de la generación del PDF. Además, si lo necesitas, puedes incluir código directamente en [LaTeX](//github.com/libreim/tutorials/blob/master/ejemplo.tex)
+ Puede incluirse [información adicional](http://pandoc.org/MANUAL.html#variables-set-by-pandoc) en la cabecera (escrita en [YAML](http://yaml.org)) para controlar distintos aspectos de la generación del PDF.
+ Además, si lo necesitas, puedes incluir código directamente en [LaTeX](//github.com/libreim/tutorials/blob/master/ejemplo.tex)
