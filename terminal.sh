@@ -101,7 +101,15 @@ welcome() {
 #-------------------------------------------------------------------------------
 # En derivadas de Debian (por ejemplo Ubuntu) se utiliza apt:
 sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
 sudo apt-get install cmatrix
-
+# O eliminar:
+sudo rm nombre_paquete
+sudo rm -R nombre_paquete
 # En Arch Linux y sus derivadas utilizamos pacman:
 sudo pacman -Syy cmatrix
+sudo pacman -S nombre_paquete
+# O eliminar:
+sudo pacman -R nombre-paquete
+sudo pacman -Rs nombre_paquete
