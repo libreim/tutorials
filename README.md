@@ -5,6 +5,7 @@ Pequeños tutoriales introductorios a herramientas de Informática y Matemática
 
 * [Introducción a la terminal de Linux](https://github.com/libreim/tutorials/blob/master/terminal.sh)
 * [Tutorial básico para Git/Github](https://github.com/libreim/tutorials/blob/master/git-github.md)
+* [Ejemplo de script R](https://github.com/libreim/tutorials/blob/master/ejemplo.R)
 
 ## Herramientas para el estudio
 
