@@ -50,6 +50,15 @@
 % paquete para poner subfiguras
 \usepackage{subfigure}
 
+\newmintedfile[mypython]{python}{
+    linenos,
+    numbersep=5pt,
+    gobble=0,
+    frame=lines,
+    framesep=2mm,
+}
+
+
 % Lo último que haremos en este preámbulo será declarar el título
 % y el autor de nuestro documento
 \title{Ejemplo de documento en LaTeX}
@@ -264,8 +273,11 @@ Otra opción es importar directamente a nuestro PDF el código al completo de un
 
 En este caso, lo haremos para ficheros con código escrito en Python, e importaremos el fichero de la siguiente manera:
 \begin{minted}[frame=single,label={Importar ficheros de código en LaTeX}]{tex}
-\mycpp[label="Nombre del frame"]{prueba.py}
+\mycpp[label="Nombre_del_frame"]{prueba.py}
 \end{minted}
+
+Y aquí tenemos el resultado: 
+\mypython[label="Nombre"]{prueba.py}
 
 Usemos la opción que usemos, para compilar el fichero \LaTeX, tenemos que usar la siguiente orden en la consola:
 
