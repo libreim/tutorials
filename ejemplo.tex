@@ -194,4 +194,56 @@ Podemos usar el mismo entorno para dibujar gráficos de funciones (ejemplo tomad
   \end{tikzpicture}
 \end{figure}
 
+\subsection{Dia}
+
+Para ahorrar tiempo a la hora de crear diagramas, podemos usar un software llamado \href{http://dia-installer.de/}{\textbf{Dia}} que nos permite crear nuestro diagrama de forma visual y exportarlo al formato de Tikz. Al exportarlo obtendremos un documento con el diagrama en sintaxis Tikz para poder modificar lo que necesitemos (por ejemplo, poner un símbolo matemático en el diagrama). También nos permite hacer diagramas UML y un montón de cosas más. Aclaro que cuando el diagrama tiene colores la exportación a \LaTeX no suele ir muy bien. Para añadir el diagrama creado por Dia a nuestro documento podemos incluirlo en el comando \texttt{figure}, tal y como se ha hecho en la \hyperref[dia]{Figura \ref*{dia}}.
+
+\begin{figure}[!h]
+  \centering
+  \input{ejemplodia.tex}
+  \caption{Diagrama hecho con Dia}
+  \label{dia}
+\end{figure}
+
+\subsection{Subfiguras}
+
+Para poner varias imágenes en una misma figura, usamos el paquete \texttt{subfigure}. Para poder dos imágenes una al lado de la otra debemos usar \texttt{mbox}.
+
+\begin{figure}[!h]
+  \mbox{
+    \subfigure[Leyenda de una imagen]{
+    \includegraphics[width=0.5\textwidth]{images/kittens}
+    \label{gaticos1}
+    }
+    \subfigure[Leyenda de otra imagen]{
+    \includegraphics[width=0.5\textwidth]{images/kittens}
+    \label{gaticos2}
+    }
+  }
+  \caption{miau}
+  \label{miau}
+\end{figure}
+
+\section{Incluir código}
+
+Para incluir código en nuestro documento podemos usar el paquete \texttt{minted}. Para instalarlo en Linux, usamos el siguiente comando:
+
+
+\begin{minted}[frame=single, label={Instalación de minted en Arch Linux}]{console}
+$ sudo pacman -S minted
+$ sudo pacman -S python-pygments
+\end{minted}
+
+\begin{minted}[frame=single, label={Instalación de minted en Ubuntu}]{console}
+$ sudo apt-get install texlive-latex-extra
+$ sudo apt-get install python-pygments
+\end{minted}
+
+
+Para ver todos los lenguajes que soporta podemos ejecutar el siguiente comando:
+
+\begin{minted}[frame=single,label={Lenguajes soportados por minted}]{console}
+$ pygmentize -L lexers
+\end{minted}
+
 \end{document}
