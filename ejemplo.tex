@@ -234,7 +234,6 @@ Para poner varias imágenes en una misma figura, usamos el paquete \texttt{subfi
 
 Para incluir código en nuestro documento podemos usar el paquete \texttt{minted}. Para instalarlo en Linux, usamos el siguiente comando:
 
-
 \begin{minted}[frame=single, label={Instalación de minted en Arch Linux}]{console}
 $ sudo pacman -S minted
 $ sudo pacman -S python-pygments
@@ -245,11 +244,33 @@ $ sudo apt-get install texlive-latex-extra
 $ sudo apt-get install python-pygments
 \end{minted}
 
-
 Para ver todos los lenguajes que soporta podemos ejecutar el siguiente comando:
 
 \begin{minted}[frame=single,label={Lenguajes soportados por minted}]{console}
 $ pygmentize -L lexers
+\end{minted}
+
+Otra opción es importar directamente a nuestro PDF el código al completo de un fichero fuente externo. Esto es útil ya que si modificamos nuestro código, al compilar el fichero \texttt{.tex}, automáticamente tendremos el código actualizado, evitando tener que ir modificando el código en sitios diferentes. Para ello, introducimos en la cabecera el siguiente fragmento de código:
+
+\begin{minted}[frame=single,label={Importar ficheros de código en LaTeX}]{tex}
+ \newmintedfile[nombreDeLaEtiqueta]{python}{
+    linenos,
+    numbersep=5pt,
+    gobble=0,
+    frame=lines,
+    framesep=2mm,
+}
+\end{minted}
+
+En este caso, lo haremos para ficheros con código escrito en Python, e importaremos el fichero de la siguiente manera:
+\begin{minted}[frame=single,label={Importar ficheros de código en LaTeX}]{tex}
+\mycpp[label="Nombre del frame"]{prueba.py}
+\end{minted}
+
+Usemos la opción que usemos, para compilar el fichero \LaTeX, tenemos que usar la siguiente orden en la consola:
+
+\begin{minted}[frame=single,label={Lenguajes soportados por minted}]{console}
+$ pdflatex -shell-escape fichero.tex
 \end{minted}
 
 \end{document}
