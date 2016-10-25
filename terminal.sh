@@ -105,8 +105,8 @@ sudo apt-get upgrade
 sudo apt-get dist-upgrade
 sudo apt-get install cmatrix
 # O eliminar:
-sudo rm nombre_paquete
-sudo rm -R nombre_paquete
+sudo apt-get remove nombre_paquete
+sudo apt-get purge nombre_paquete
 # En Arch Linux y sus derivadas utilizamos pacman:
 sudo pacman -Syy cmatrix
 sudo pacman -S nombre_paquete
