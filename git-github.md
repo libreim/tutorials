@@ -34,7 +34,7 @@
     git push origin master
     ~~~
 
-1. Lee [nuestro manual](http://tux.ugr.es/dgiim/blog/2014/02/23/manualgit/) para saber qué estás haciendo.
+1. Lee [nuestro manual](https://github.com/libreim/blog/blob/sites/blog/_posts/2014-2-23-manualgit.md) para saber qué estás haciendo.
 
 (*) Si no has usado git nunca, puede que tengas que configurarlo por primera vez antes de crear un commit. Para ello, ejecuta los siguientes comandos indicando tu nombre y tu email (el asociado a tu cuenta de GitHub):
 
