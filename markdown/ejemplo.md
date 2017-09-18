@@ -16,7 +16,7 @@ También puede compilarse a LaTeX utilizando herramientas como [`pandoc`](http:/
 ## Sintaxis
 
 A continuación puedes ver ejemplos de la sintaxis básica. 
-Para entender cómo funciona Markdown mira [el código fuente](//raw.githubusercontent.com/libreim/tutorials/master/markdown.md) de este documento a la vez que lo lees.
+Para entender cómo funciona Markdown mira [el código fuente](//raw.githubusercontent.com/libreim/tutorials/master/markdown/ejemplo.md) de este documento a la vez que lo lees.
 
 ### Títulos
 
@@ -92,7 +92,6 @@ También puedes poner enlaces directamente entre ángulos:
 ## Cómo usarlo
 
 Puedes usar Markdown en Github en un archivo con la extensión `.md` o en los comentarios, las [issues](//guides.github.com/features/issues) y Github lo interpretará automáticamente. 
-También puedes usarlo en [DGIIM Overflow](http://tux.ugr.es/dgiim/overflow).
 
 ### Pandoc
 
@@ -106,4 +105,4 @@ pandoc markdown.md -o markdown.pdf
 ```
 
  Puede incluirse [información adicional](http://pandoc.org/MANUAL.html#variables-set-by-pandoc) en la cabecera (escrita en [YAML](http://yaml.org)) para controlar distintos aspectos de la generación del PDF.
- Además, si lo necesitas, puedes incluir código directamente en [LaTeX](//github.com/libreim/tutorials/blob/master/ejemplo.tex)
+ Además, si lo necesitas, puedes incluir código directamente en [LaTeX](//github.com/libreim/tutorials/blob/master/latex/ejemplo.tex)
