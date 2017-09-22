@@ -2,10 +2,12 @@
 #+AUTHOR: Mario Román
 #+OPTIONS: broken-links:mark num:nil
 #+LANGUAGE: es
+#+LATEX_HEADER: % Aquí puedes incluir comandos de latex, paquetes o plantillas
 #+LATEX_HEADER: \usepackage{tikz-cd}
+# Los comentarios en org se escriben con #
 
 * org
-[[http://orgmode.org/][=orgmode=]] es un modo del editor de texto Emacs basado en el lenguaje
+*[[http://orgmode.org/][orgmode]]* es un modo del editor de texto Emacs basado en el lenguaje
 de marcado *org*, que se utiliza para organizar y planificar tareas,
 tomar apuntes y estructurar información. En este tutorial vamos sólo
 a fijarnos en *org* como lenguaje de marcado, similar a *Markdown*.
