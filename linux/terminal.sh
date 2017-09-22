@@ -8,7 +8,10 @@
 # Muestra un mensaje por pantalla. Los mensajes multilínea se pueden delimitar
 # con <<MARCA y terminarlos con MARCA
 cat <<EOF
-Es mejor que no ejecutes este guion entero de una vez. Abre el archivo $0 y ve probando paso a paso. Saliendo...
+Es mejor que no ejecutes este guion entero de una vez.
+Abre el archivo $0 y ve probando paso a paso.
+
+Saliendo...
 EOF
 # aborta el script
 exit 0
@@ -47,6 +50,8 @@ cd test-libreim
 touch archivo-regular
 # escribe al archivo
 echo "Algo de contenido" > archivo-regular
+# abre un editor simple en terminal
+nano archivo-regular
 # lee el contenido
 cat archivo-regular
 # renombra/mueve el archivo
@@ -85,6 +90,7 @@ which -a ruby
 alias accio='find / -name'
 # una función:
 welcome() {
+  # declara variables locales
   local user=$(whoami)
   local computer=$(hostname)
   echo "Hola $user! Bienvenido a $computer"
@@ -97,19 +103,26 @@ welcome() {
 ################################################################################
 
 #-------------------------------------------------------------------------------
-# 5. Gestión de paquetes
+# 5.a. Gestión de paquetes en Ubuntu/Linux Mint/Elementary
 #-------------------------------------------------------------------------------
-# En derivadas de Debian (por ejemplo Ubuntu) se utiliza apt:
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get dist-upgrade
-sudo apt-get install cmatrix
-# O eliminar:
-sudo apt-get remove nombre_paquete
-sudo apt-get purge nombre_paquete
-# En Arch Linux y sus derivadas utilizamos pacman:
-sudo pacman -Syy cmatrix
-sudo pacman -S nombre_paquete
-# O eliminar:
-sudo pacman -R nombre-paquete
-sudo pacman -Rs nombre_paquete
+# actualiza la base de datos de paquetes
+sudo apt update
+# actualiza los paquetes del sistema
+sudo apt upgrade
+# actualiza la versión del sistema
+sudo apt dist-upgrade
+# instala un paquete
+sudo apt install firefox
+# elimina un paquete
+sudo apt remove firefox
+sudo apt purge firefox
+
+#-------------------------------------------------------------------------------
+# 5.b. Gestión de paquetes en Arch Linux
+#-------------------------------------------------------------------------------
+# actualiza los paquetes del sistema
+sudo pacman -Syu
+# actualiza la base de datos e instala un paquete
+sudo pacman -Sy firefox
+# elimina un paquete
+sudo pacman -Rc firefox
