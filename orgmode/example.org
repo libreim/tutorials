@@ -1,0 +1,105 @@
+#+TITLE: Tutorial de org-mode
+#+AUTHOR: Mario Román
+#+OPTIONS: broken-links:mark num:nil
+#+LANGUAGE: es
+#+LATEX_HEADER: \usepackage{tikz-cd}
+
+* org
+[[http://orgmode.org/][=orgmode=]] es un modo del editor de texto Emacs basado en el lenguaje
+de marcado *org*, que se utiliza para organizar y planificar tareas,
+tomar apuntes y estructurar información. En este tutorial vamos sólo
+a fijarnos en *org* como lenguaje de marcado, similar a *Markdown*.
+
+Este documento está escrito usando =org-mode=, y puede compilarse a
+=LaTeX=, a =HTML=, =reveal.js=, =ODT= y muchos otros formatos
+similares. Este tutorial de =org-mode= se basa en el tutorial de
+markdown de Pablo Baeyens para LibreIM.
+
+* Secciones
+Los títulos se indican con asteriscos. Pueden anidarse arbitrariamente
+tantos niveles como se quiera. En Emacs, los títulos pueden contraerse
+y expandirse usando =TAB=.
+
+** Nivel 2
+*** Nivel 3
+**** Nivel 4
+...
+* Formato
+Puede darse *negrita*, /cursiva/, */ambos/*, _subrayado_, ~tachado~  o =monoespaciado=.
+También puedes poner citas
+
+#+begin_quote
+GNU, which stands for Gnu's Not Unix, is the name for the complete
+Unix-compatible software system which I am writing so that I can give
+it away free to everyone who can use it.
+#+end_quote
+
+* Listas
+Pueden añadirse listas no numeradas en un párrafo nuevo
+
+ - primer elemento;
+ - segundo elemento;
+   - subelemento del segundo;
+ - tercer elemento.
+
+Y también numeradas
+
+ 1. primer,
+ 2. segundo,
+ 3. y tercer elemento.
+
+Pueden recolocarse en Emacs usando =Ctrl+Up= y =Ctrl+Down=.
+Existen además listas con tareas
+ 
+ - [ ] Tarea por hacer.
+ - [X] Tarea completada.
+
+Y cada cabecera puede marcar una tarea por hacer
+
+** TODO Tarea por hacer
+*** TODO Subtarea por hacer
+*** TODO Una tarea ya finalizada
+
+* Tablas
+Pueden escribirse tablas directamente con =|= y mover filas y columnas
+con =Alt+Flechas=.
+
+|------------------+-------------------------------------------------------------------|
+| Cosas            | Descripción                                                       |
+|------------------+-------------------------------------------------------------------|
+| Una primera cosa | Esta es la primera fila de la tabla                               |
+| Otra cosa        | Las columnas cambian de tamaño automáticamente según es necesario |
+|------------------+-------------------------------------------------------------------|
+
+* Código
+Puede escribirse código con sintaxis coloreada en casi cualquier lenguaje
+de programación.
+
+#+BEGIN_SRC python
+result = 0
+for i in range(5):
+  result = result + i
+
+return result
+#+END_SRC
+
+#+RESULTS:
+: 10
+
+* Fórmulas en Latex
+Pueden escribirse fórmulas en latex que luego se exportarán a latex
+directamente o a html mediante MathJax. Una integral,
+
+\[
+\int e^{cx}\log x\ dx = \frac{1}{c} \left( e^{cx} \log |x| - \operatorname{Ei}(cx) \right)
+\]
+
+o un diagrama commutativo con =tikz-cd=
+
+\[\begin{tikzcd}
+A \rar{f} \dar[swap]{g} & 
+B \dar{h} \\
+C \rar{k} &
+D
+\end{tikzcd}\]
+.
