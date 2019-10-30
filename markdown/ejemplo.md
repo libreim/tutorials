@@ -106,3 +106,26 @@ pandoc markdown.md -o markdown.pdf
 
  Puede incluirse [información adicional](http://pandoc.org/MANUAL.html#variables-set-by-pandoc) en la cabecera (escrita en [YAML](http://yaml.org)) para controlar distintos aspectos de la generación del PDF.
  Además, si lo necesitas, puedes incluir código directamente en [LaTeX](//github.com/libreim/tutorials/blob/master/latex/ejemplo.tex)
+
+
+> Pro tip: Puedes añadir esta función a tu archivo ~/.bashrc para facilitar este proceso de generación de un pdf.
+
+```bash
+## Pandoc processing: Input: source file. Output: pdf processed file with
+## the name of the original input file but swapped extension to pdf
+##
+## Usage: Pandoc file\ name.md
+function Pandoc() {
+    var=`echo "$1" | rev |  cut -d'.' -f2- | rev`
+    var="$var.pdf"
+    var=${var//\\//}
+    input=$1
+    input=${input//\\//}
+    echo "Reading and compiling: $input"
+    pandoc --latex-engine=xelatex "$input" -o "$var" && echo "Done, output: $var"
+}
+```
+
+Ejemplo de uso:
+
+`Pandoc Apuntes\ asignatura.md `
